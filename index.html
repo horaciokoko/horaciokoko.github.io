@@ -5,9 +5,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Portfolio - Robson RAZANAVAHY</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <style>
         /* Styles de base */
+        /* Reset */
         * {
             box-sizing: border-box;
             margin: 0;
@@ -15,14 +16,16 @@
         }
 
         body {
-            font-family: Arial, sans-serif;
+            font-family: 'Roboto', sans-serif;
             color: #333;
-            background: #f9f9f9;
-            transition: background 0.3s;
+            background: #f4f4f9;
+            /* Plus léger et agréable pour les yeux */
+            transition: background 0.3s ease;
         }
 
+        /* Header */
         header {
-            background: #444;
+            background: #333;
             color: #fff;
             padding: 1em;
             text-align: center;
@@ -35,10 +38,11 @@
 
         header h1 {
             font-size: 2em;
-            font-weight: bold;
-            letter-spacing: 2px;
+            font-weight: 700;
+            letter-spacing: 1px;
         }
 
+        /* Navigation */
         nav ul {
             list-style: none;
             display: flex;
@@ -52,12 +56,12 @@
             text-decoration: none;
             font-size: 1em;
             padding: 0.5em 1em;
-            transition: background 0.3s, transform 0.2s;
+            transition: background 0.3s, transform 0.2s ease;
         }
 
         nav ul li a:hover {
-            background: rgba(255, 255, 255, 0.2);
-            border-radius: 5px;
+            background: rgba(255, 255, 255, 0.15);
+            border-radius: 8px;
             transform: translateY(-2px);
         }
 
@@ -75,7 +79,7 @@
         }
 
         section h2 {
-            color: #444;
+            color: #333;
             font-size: 2em;
             margin-bottom: 1em;
             position: relative;
@@ -85,30 +89,30 @@
 
         section h2::after {
             content: '';
-            width: 50px;
-            height: 3px;
+            width: 60px;
+            height: 4px;
             background: #ff6347;
             position: absolute;
             left: 0;
             bottom: 0;
+            border-radius: 2px;
         }
 
-        /* Style des projets et effets de survol */
+        /* Projects Styling */
         .project-list {
             display: flex;
             flex-direction: column;
-            gap: 1em;
+            gap: 1.5em;
         }
 
         .project {
             background: #fff;
             padding: 2em;
-            border-radius: 8px;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            border-radius: 12px;
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
             transition: transform 0.3s ease, box-shadow 0.3s ease;
             opacity: 0;
             transform: translateY(50px);
-            transition: opacity 0.5s ease-out, transform 0.5s ease-out;
         }
 
         .project.in-view {
@@ -118,10 +122,10 @@
 
         .project:hover {
             transform: translateY(-5px);
-            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
         }
 
-        /* Liste de compétences */
+        /* Skills List */
         ul.skills-list {
             list-style: none;
             display: flex;
@@ -135,24 +139,84 @@
             color: #fff;
             padding: 0.5em 1em;
             border-radius: 20px;
-            transition: background 0.3s;
+            transition: background 0.3s, transform 0.2s ease;
         }
 
         ul.skills-list li:hover {
             background: #333;
+            transform: scale(1.05);
         }
 
+        /* Footer */
         footer {
             text-align: center;
             padding: 1.5em;
-            background: #444;
+            background: #333;
             color: #fff;
             margin-top: 2em;
             transition: background-color 0.3s;
         }
 
         footer:hover {
-            background: #333;
+            background: #222;
+        }
+
+        /* Contact Icons and Buttons */
+        .contact-info {
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+            margin-top: 1em;
+        }
+
+        .contact-info a {
+            display: inline-flex;
+            align-items: center;
+            padding: 0.7em 1.5em;
+            background-color: #ff6347;
+            color: #fff;
+            border-radius: 25px;
+            text-decoration: none;
+            font-size: 1em;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.15);
+            transition: background 0.3s ease, box-shadow 0.3s ease, transform 0.2s ease;
+        }
+
+        .contact-info a i {
+            margin-right: 8px;
+            font-size: 1.2em;
+        }
+
+        .contact-info a:hover {
+            background-color: #333;
+            box-shadow: 0 6px 10px rgba(0, 0, 0, 0.2);
+            transform: translateY(-2px);
+        }
+
+        /* Project Links as Buttons */
+        .project-link {
+            display: inline-flex;
+            align-items: center;
+            padding: 0.7em 1.5em;
+            background-color: #ff6347;
+            color: #fff;
+            border-radius: 25px;
+            text-decoration: none;
+            font-size: 1em;
+            margin-top: 10px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.15);
+            transition: background 0.3s ease, box-shadow 0.3s ease, transform 0.2s ease;
+        }
+
+        .project-link i {
+            margin-right: 8px;
+            font-size: 1.2em;
+        }
+
+        .project-link:hover {
+            background-color: #333;
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+            transform: translateY(-2px);
         }
     </style>
 </head>
@@ -183,7 +247,7 @@
             <article class="project">
                 <h3>Peche expert</h3>
                 <p>Mise en place de la liaison entre le catalogue et commande du site avec un outil externe MENLOG.</p>
-                <a href="https://www.peche-expert.com/" target="_blank">Voir le site</a>
+                <a href="https://www.peche-expert.com/" target="_blank" class="project-link">Voir le site</a>
             </article>
 
             <article class="project">
@@ -191,7 +255,7 @@
                 <p>Moteur d'import des produits du catalogue depuis un fichier CSV externe. Configuration des filtres
                     sur la
                     partie FRONT.</p>
-                <a href="https://www.maison-kanope.fr/" target="_blank">Voir le site</a>
+                <a href="https://www.maison-kanope.fr/" target="_blank" class="project-link">Voir le site</a>
             </article>
 
             <article class="project">
@@ -199,7 +263,7 @@
                 <p>Une plateforme pour s'inscrire aux parcours et formations. Tunnel d'adhésion et espace adhérent mis
                     en place.
                 </p>
-                <a href="https://www.cticm.com/" target="_blank">Voir le site</a>
+                <a href="https://www.cticm.com/" target="_blank" class="project-link">Voir le site</a>
             </article>
         </div>
     </section>
@@ -220,13 +284,17 @@
     <section id="contact" class="animated-section">
         <h2>Contact</h2>
         <p>N’hésitez pas à me contacter pour discuter de projets ou de collaborations.</p>
-        <ul>
-            <li>Email : <a href="mailto:razanavahy@gmail.com">razanavahy@gmail.com</a></li>
-            <li>LinkedIn : <a href="https://www.linkedin.com/in/razanavahy-robson-03ab55114" target="_blank">Profil
-                    LinkedIn</a>
-            </li>
-            <li>GitHub : <a href="https://github.com/horaciokoko" target="_blank">Profil GitHub</a></li>
-        </ul>
+        <div class="contact-info">
+            <a href="mailto:razanavahy@gmail.com" target="_blank">
+                <i class="fas fa-envelope"></i>Email : razanavahy@gmail.com
+            </a>
+            <a href="https://www.linkedin.com/in/robson-razanavahy" target="_blank">
+                <i class="fab fa-linkedin"></i>LinkedIn : Robson RAZANAVAHY
+            </a>
+            <a href="https://github.com/robsonrazanavahy" target="_blank">
+                <i class="fab fa-github"></i>GitHub : robsonrazanavahy
+            </a>
+        </div>
     </section>
 
     <footer>
