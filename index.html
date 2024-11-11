@@ -1,60 +1,99 @@
 <!DOCTYPE html>
 <html lang="fr">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Portfolio - Robson RAZANAVAHY</title>
     <link rel="stylesheet" href="style.css">
     <style>
-        /* Style de base */
-        body {
-            font-family: Arial, sans-serif;
+        /* Styles de base */
+        * {
+            box-sizing: border-box;
             margin: 0;
             padding: 0;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
             color: #333;
-            overflow-x: hidden;
+            background: #f9f9f9;
+            transition: background 0.3s;
         }
 
         header {
-            background-color: #444;
+            background: #444;
             color: #fff;
             padding: 1em;
             text-align: center;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            transition: background-color 0.3s ease;
+        }
+
+        header h1 {
+            font-size: 2em;
+            font-weight: bold;
+            letter-spacing: 2px;
         }
 
         nav ul {
             list-style: none;
-            padding: 0;
-        }
-
-        nav ul li {
-            display: inline;
-            margin: 0 10px;
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            padding-top: 10px;
         }
 
         nav ul li a {
             color: #fff;
             text-decoration: none;
-            transition: color 0.3s ease;
+            font-size: 1em;
+            padding: 0.5em 1em;
+            transition: background 0.3s, transform 0.2s;
         }
 
         nav ul li a:hover {
-            color: #ffda44;
+            background: rgba(255, 255, 255, 0.2);
+            border-radius: 5px;
+            transform: translateY(-2px);
         }
 
+        /* Animations des sections */
         section {
-            padding: 2em;
-            margin: 1em 0;
+            padding: 4em 10%;
             opacity: 0;
-            transform: translateY(30px);
-            transition: opacity 0.6s ease, transform 0.6s ease;
+            transform: translateY(50px);
+            transition: opacity 0.6s ease-out, transform 0.6s ease-out;
         }
 
-        h2 {
+        section.in-view {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        section h2 {
             color: #444;
+            font-size: 2em;
+            margin-bottom: 1em;
             position: relative;
+            display: inline-block;
+            padding-bottom: 10px;
         }
 
+        section h2::after {
+            content: '';
+            width: 50px;
+            height: 3px;
+            background: #ff6347;
+            position: absolute;
+            left: 0;
+            bottom: 0;
+        }
+
+        /* Style des projets et effets de survol */
         .project-list {
             display: flex;
             flex-direction: column;
@@ -62,47 +101,63 @@
         }
 
         .project {
-            background: #f4f4f4;
-            padding: 1em;
-            border-radius: 5px;
+            background: #fff;
+            padding: 2em;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
             transition: transform 0.3s ease, box-shadow 0.3s ease;
+            opacity: 0;
+            transform: translateY(50px);
+            transition: opacity 0.5s ease-out, transform 0.5s ease-out;
+        }
+
+        .project.in-view {
+            opacity: 1;
+            transform: translateY(0);
         }
 
         .project:hover {
             transform: translateY(-5px);
-            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.15);
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
         }
 
-        ul {
-            list-style-type: none;
-            padding: 0;
+        /* Liste de compétences */
+        ul.skills-list {
+            list-style: none;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 15px;
+            margin-top: 1em;
         }
 
-        ul li {
-            transition: all 0.3s ease;
+        ul.skills-list li {
+            background: #ff6347;
+            color: #fff;
+            padding: 0.5em 1em;
+            border-radius: 20px;
+            transition: background 0.3s;
         }
 
-        ul li:hover {
-            transform: scale(1.1);
-            color: #ffda44;
+        ul.skills-list li:hover {
+            background: #333;
         }
 
         footer {
             text-align: center;
-            padding: 1em;
-            background-color: #444;
+            padding: 1.5em;
+            background: #444;
             color: #fff;
+            margin-top: 2em;
+            transition: background-color 0.3s;
         }
 
-        /* Animation d'apparition */
-        .appear {
-            opacity: 1;
-            transform: translateY(0);
+        footer:hover {
+            background: #333;
         }
     </style>
 </head>
+
 <body>
-    <!-- En-tête avec ton nom et un menu de navigation -->
     <header>
         <h1>Portfolio de Robson RAZANAVAHY</h1>
         <nav>
@@ -115,16 +170,14 @@
         </nav>
     </header>
 
-    <!-- Section À propos de toi -->
-    <section id="about">
+    <section id="about" class="animated-section">
         <h2>À propos de moi</h2>
         <p>Je suis développeur PHP WordPress senior avec plusieurs années d'expérience dans le développement de sites
             web. Spécialisé dans la création de solutions personnalisées et de fonctionnalités avancées pour des projets
             de toutes tailles.</p>
     </section>
 
-    <!-- Section Projets -->
-    <section id="projects">
+    <section id="projects" class="animated-section">
         <h2>Projets</h2>
         <div class="project-list">
             <article class="project">
@@ -135,22 +188,25 @@
 
             <article class="project">
                 <h3>KANOPE</h3>
-                <p>Moteur d'import des produits du catalogue depuis un fichier CSV externe. Configuration des filtres sur la partie FRONT.</p>
+                <p>Moteur d'import des produits du catalogue depuis un fichier CSV externe. Configuration des filtres
+                    sur la
+                    partie FRONT.</p>
                 <a href="https://www.maison-kanope.fr/" target="_blank">Voir le site</a>
             </article>
 
             <article class="project">
                 <h3>CTICM</h3>
-                <p>Une plateforme pour s'inscrire aux parcours et formations. Tunnel d'adhésion et espace adhérent mis en place.</p>
+                <p>Une plateforme pour s'inscrire aux parcours et formations. Tunnel d'adhésion et espace adhérent mis
+                    en place.
+                </p>
                 <a href="https://www.cticm.com/" target="_blank">Voir le site</a>
             </article>
         </div>
     </section>
 
-    <!-- Section Compétences -->
-    <section id="skills">
+    <section id="skills" class="animated-section">
         <h2>Compétences</h2>
-        <ul>
+        <ul class="skills-list">
             <li>PHP</li>
             <li>WordPress</li>
             <li>WooCommerce</li>
@@ -161,33 +217,41 @@
         </ul>
     </section>
 
-    <!-- Section Contact -->
-    <section id="contact">
+    <section id="contact" class="animated-section">
         <h2>Contact</h2>
         <p>N’hésitez pas à me contacter pour discuter de projets ou de collaborations.</p>
         <ul>
             <li>Email : <a href="mailto:razanavahy@gmail.com">razanavahy@gmail.com</a></li>
-            <li>LinkedIn : <a href="https://www.linkedin.com/in/razanavahy-robson-03ab55114" target="_blank">Profil LinkedIn</a></li>
+            <li>LinkedIn : <a href="https://www.linkedin.com/in/razanavahy-robson-03ab55114" target="_blank">Profil
+                    LinkedIn</a>
+            </li>
             <li>GitHub : <a href="https://github.com/horaciokoko" target="_blank">Profil GitHub</a></li>
         </ul>
     </section>
 
-    <!-- Pied de page -->
     <footer>
         <p>&copy; 2024 RAZANAVAHY. Tous droits réservés.</p>
     </footer>
 
     <script>
-        // Ajout d'animations d'apparition au défilement
-        const sections = document.querySelectorAll("section");
-        window.addEventListener("scroll", () => {
-            sections.forEach(section => {
-                const sectionTop = section.getBoundingClientRect().top;
-                if (sectionTop < window.innerHeight - 100) {
-                    section.classList.add("appear");
+        // Fonction pour vérifier si un élément est dans le champ de vision
+        function isInViewport(element) {
+            const rect = element.getBoundingClientRect();
+            return rect.top <= window.innerHeight && rect.bottom >= 0;
+        }
+
+        // Animation d'apparition des sections au défilement
+        function animateOnScroll() {
+            document.querySelectorAll('.animated-section, .project').forEach((el) => {
+                if (isInViewport(el)) {
+                    el.classList.add('in-view');
                 }
             });
-        });
+        }
+
+        window.addEventListener('scroll', animateOnScroll);
+        window.addEventListener('load', animateOnScroll);
     </script>
 </body>
+
 </html>
