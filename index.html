@@ -1,17 +1,18 @@
 <!DOCTYPE html>
 <html lang="fr">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Portfolio - [Ton Nom]</title>
-    <link rel="stylesheet" href="style.css"> <!-- Lien vers ta feuille de style -->
+    <title>Portfolio - Robson RAZANAVAHY</title>
+    <link rel="stylesheet" href="style.css">
     <style>
+        /* Style de base */
         body {
             font-family: Arial, sans-serif;
             margin: 0;
             padding: 0;
             color: #333;
+            overflow-x: hidden;
         }
 
         header {
@@ -34,15 +35,24 @@
         nav ul li a {
             color: #fff;
             text-decoration: none;
+            transition: color 0.3s ease;
+        }
+
+        nav ul li a:hover {
+            color: #ffda44;
         }
 
         section {
             padding: 2em;
             margin: 1em 0;
+            opacity: 0;
+            transform: translateY(30px);
+            transition: opacity 0.6s ease, transform 0.6s ease;
         }
 
         h2 {
             color: #444;
+            position: relative;
         }
 
         .project-list {
@@ -55,6 +65,26 @@
             background: #f4f4f4;
             padding: 1em;
             border-radius: 5px;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .project:hover {
+            transform: translateY(-5px);
+            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.15);
+        }
+
+        ul {
+            list-style-type: none;
+            padding: 0;
+        }
+
+        ul li {
+            transition: all 0.3s ease;
+        }
+
+        ul li:hover {
+            transform: scale(1.1);
+            color: #ffda44;
         }
 
         footer {
@@ -63,13 +93,18 @@
             background-color: #444;
             color: #fff;
         }
-</style>
-</head>
 
+        /* Animation d'apparition */
+        .appear {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    </style>
+</head>
 <body>
     <!-- En-tête avec ton nom et un menu de navigation -->
     <header>
-        <h1>Portfolio de [Ton Nom]</h1>
+        <h1>Portfolio de Robson RAZANAVAHY</h1>
         <nav>
             <ul>
                 <li><a href="#about">À propos</a></li>
@@ -92,21 +127,23 @@
     <section id="projects">
         <h2>Projets</h2>
         <div class="project-list">
-            <!-- Exemple de projet -->
             <article class="project">
-                <h3>Nom du Projet 1</h3>
-                <p>Description brève du projet. Ex: Développement d'un site e-commerce personnalisé avec intégration
-                    WooCommerce.</p>
-                <a href="https://github.com/tonprofil/nom-du-projet" target="_blank">Voir sur GitHub</a>
+                <h3>Peche expert</h3>
+                <p>Mise en place de la liaison entre le catalogue et commande du site avec un outil externe MENLOG.</p>
+                <a href="https://www.peche-expert.com/" target="_blank">Voir le site</a>
             </article>
 
             <article class="project">
-                <h3>Nom du Projet 2</h3>
-                <p>Description brève du projet. Ex: Création d'un plugin WordPress pour la gestion des adhésions et des
-                    notifications.</p>
-                <a href="https://github.com/tonprofil/nom-du-projet" target="_blank">Voir sur GitHub</a>
+                <h3>KANOPE</h3>
+                <p>Moteur d'import des produits du catalogue depuis un fichier CSV externe. Configuration des filtres sur la partie FRONT.</p>
+                <a href="https://www.maison-kanope.fr/" target="_blank">Voir le site</a>
             </article>
-            <!-- Ajoute d'autres projets au besoin -->
+
+            <article class="project">
+                <h3>CTICM</h3>
+                <p>Une plateforme pour s'inscrire aux parcours et formations. Tunnel d'adhésion et espace adhérent mis en place.</p>
+                <a href="https://www.cticm.com/" target="_blank">Voir le site</a>
+            </article>
         </div>
     </section>
 
@@ -129,16 +166,28 @@
         <h2>Contact</h2>
         <p>N’hésitez pas à me contacter pour discuter de projets ou de collaborations.</p>
         <ul>
-            <li>Email : <a href="mailto:tonemail@example.com">tonemail@example.com</a></li>
-            <li>LinkedIn : <a href="https://linkedin.com/in/tonprofil" target="_blank">Profil LinkedIn</a></li>
-            <li>GitHub : <a href="https://github.com/tonprofil" target="_blank">Profil GitHub</a></li>
+            <li>Email : <a href="mailto:razanavahy@gmail.com">razanavahy@gmail.com</a></li>
+            <li>LinkedIn : <a href="https://www.linkedin.com/in/razanavahy-robson-03ab55114" target="_blank">Profil LinkedIn</a></li>
+            <li>GitHub : <a href="https://github.com/horaciokoko" target="_blank">Profil GitHub</a></li>
         </ul>
     </section>
 
     <!-- Pied de page -->
     <footer>
-        <p>&copy; 2024 [Ton Nom]. Tous droits réservés.</p>
+        <p>&copy; 2024 RAZANAVAHY. Tous droits réservés.</p>
     </footer>
-</body>
 
+    <script>
+        // Ajout d'animations d'apparition au défilement
+        const sections = document.querySelectorAll("section");
+        window.addEventListener("scroll", () => {
+            sections.forEach(section => {
+                const sectionTop = section.getBoundingClientRect().top;
+                if (sectionTop < window.innerHeight - 100) {
+                    section.classList.add("appear");
+                }
+            });
+        });
+    </script>
+</body>
 </html>
