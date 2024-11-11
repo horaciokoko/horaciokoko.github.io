@@ -4,83 +4,278 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Portfolio - [Ton Nom]</title>
-    <link rel="stylesheet" href="style.css"> <!-- Lien vers ta feuille de style -->
+    <title>Portfolio - Robson RAZANAVAHY</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <!-- Inclure le CSS de Slick -->
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css" />
+    <link rel="stylesheet" type="text/css"
+        href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.css" />
+
+    <!-- Inclure le JS de Slick (assurez-vous d'inclure jQuery avant) -->
+    <script type="text/javascript" src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+    <!-- Magnific Popup CSS & JS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/magnific-popup.js/1.1.0/magnific-popup.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/magnific-popup.js/1.1.0/jquery.magnific-popup.min.js"></script>
+    <link rel="stylesheet" href="assets/css/styles.css">
 </head>
 
 <body>
-    <!-- En-tête avec ton nom et un menu de navigation -->
     <header>
-        <h1>Portfolio de [Ton Nom]</h1>
-        <nav>
-            <ul>
-                <li><a href="#about">À propos</a></li>
-                <li><a href="#projects">Projets</a></li>
-                <li><a href="#skills">Compétences</a></li>
-                <li><a href="#contact">Contact</a></li>
-            </ul>
-        </nav>
+        <button class="menu-toggle" aria-label="Toggle navigation">
+            <span class="hamburger"></span>
+        </button>
+        <h1 id="dynamic-title">Porfolio - Robson RAZANAVAHY</h1>
+        <div>
+            <nav>
+                <ul class="menu">
+                    <li><a href="#about">À propos</a></li>
+                    <li><a href="#projects">Projets</a></li>
+                    <li><a href="#skills">Compétences</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                    <li>
+                        <div class="theme-selector-container">
+                            <select id="theme-selector" aria-label="Sélecteur de thème">
+                                <option value="default">Par défaut</option>
+                                <option value="aqua">Aqua</option>
+                                <option value="summer">Summer</option>
+                                <option value="memory">Memory</option>
+                                <option value="earth">Earth</option>
+                                <option value="sea-wave">Sea Wave</option>
+                                <option value="tangerine">Tangerine</option>
+                                <option value="ice-cream">Ice Cream</option>
+                                <option value="beach">Beach</option>
+                            </select>
+                        </div>
+
+                    </li>
+                </ul>
+            </nav>
+        </div>
+
     </header>
 
-    <!-- Section À propos de toi -->
-    <section id="about">
-        <h2>À propos de moi</h2>
-        <p>Je suis développeur PHP WordPress senior avec plusieurs années d'expérience dans le développement de sites
-            web. Spécialisé dans la création de solutions personnalisées et de fonctionnalités avancées pour des projets
-            de toutes tailles.</p>
-    </section>
 
-    <!-- Section Projets -->
-    <section id="projects">
-        <h2>Projets</h2>
-        <div class="project-list">
-            <!-- Exemple de projet -->
-            <article class="project">
-                <h3>Nom du Projet 1</h3>
-                <p>Description brève du projet. Ex: Développement d'un site e-commerce personnalisé avec intégration
-                    WooCommerce.</p>
-                <a href="https://github.com/tonprofil/nom-du-projet" target="_blank">Voir sur GitHub</a>
-            </article>
-
-            <article class="project">
-                <h3>Nom du Projet 2</h3>
-                <p>Description brève du projet. Ex: Création d'un plugin WordPress pour la gestion des adhésions et des
-                    notifications.</p>
-                <a href="https://github.com/tonprofil/nom-du-projet" target="_blank">Voir sur GitHub</a>
-            </article>
-            <!-- Ajoute d'autres projets au besoin -->
+    <section id="about" class="about-section">
+        <div class="about-content">
+            <h2>À propos de moi</h2>
+            <p>
+                Je suis développeur PHP WordPress avec plusieurs années d'expérience dans le développement de sites web.
+                Spécialisé dans la création de solutions personnalisées et de fonctionnalités avancées pour des projets
+                de
+                toutes tailles.
+                J'ai rejoint le monde du web en 2018 et j'en suis tombé amoureux.
+                Ma mission est d'aider mon équipe à trouver les meilleures solutions face aux différentes contraintes
+                lors
+                de la mise en place
+                d'une solution digitale.
+            </p>
+            <h3>Mes principales tâches :</h3>
+            <ul class="about-tasks">
+                <li>Concevoir des solutions logicielles adaptées aux besoins des clients</li>
+                <li>Développer des solutions sur mesure</li>
+                <li>Aider l’équipe à assurer l'avancement du projet</li>
+                <li>Assurer la stabilité de la solution développée</li>
+            </ul>
+        </div>
+        <div class="about-image">
+            <img src="assets/images/avatar.jpeg" alt="Photo de profil" />
         </div>
     </section>
 
-    <!-- Section Compétences -->
-    <section id="skills">
-        <h2>Compétences</h2>
-        <ul>
-            <li>PHP</li>
-            <li>WordPress</li>
-            <li>WooCommerce</li>
-            <li>JavaScript</li>
-            <li>HTML/CSS</li>
-            <li>API REST</li>
-            <li>Git & GitHub</li>
-        </ul>
+
+    <section id="projects" class="animated-section">
+        <h2>Projets</h2>
+        <div class="project-list">
+            <article class="project">
+                <h3>KANOPE</h3>
+
+                <div class="project-content">
+                    <ul class="project-list">
+                        <li class="project-item">
+                            <span class="project-item-title">Moteur d'import des produits du catalogue depuis un fichier
+                                CSV
+                                externe</span>
+                            <ul class="sub-list">
+                                <li class="sub-item">Synchronisation des produits et des ses variantes</li>
+                                <li class="sub-item">Synchronisation des stocks</li>
+                                <li class="sub-item">Synchronisation des prix</li>
+                                <li class="sub-item">Synchronisation des commandes</li>
+                            </ul>
+                        </li>
+                        <li class="project-item">
+                            <span class="project-item-title">Configuration des filtres sur la page boutique</span>
+                            <ul class="sub-list">
+                                <li class="sub-item">Configuration du filtre avec WPGridBuilder / Search & filter</li>
+                                <li class="sub-item">Développement spécifique d'une taxonomie afin de permettre de
+                                    filtrer
+                                    par attributs de produit</li>
+                            </ul>
+                        </li>
+                    </ul>
+                    <div class="project-slider">
+                        <div class="slick-slider">
+                            <img class="slider-image" onclick="openModal(this)" src="assets/images/kanope-img1.png"
+                                alt="Screenshot 1" class="slider-image">
+                            <img class="slider-image" onclick="openModal(this)" src="assets/images/kanope-img2.png"
+                                alt="Screenshot 2" class="slider-image">
+                            <img class="slider-image" onclick="openModal(this)" src="assets/images/kanope-img3.png"
+                                alt="Screenshot 3" class="slider-image">
+                        </div>
+                    </div>
+
+                </div>
+                <a href="https://www.maison-kanope.fr/" target="_blank" class="project-link">Voir le site</a>
+            </article>
+
+            <article class="project">
+                <h3>CTICM</h3>
+
+                <div class="project-content">
+                    <ul class="project-list">
+                        <li class="project-item">
+                            <span class="project-item-title">Une plateforme pour s'inscrire aux parcours et formations.
+                                et
+                                espace
+                                adhérent.</span>
+                        </li>
+                        <li class="project-item">
+                            <span class="project-item-title">Tunnel d'adhésion</span>
+                            <ul class="sub-list">
+                                <li class="sub-item">Formulaire d'adhésion</li>
+                                <li class="sub-item">Modération et notification</li>
+                                <li class="sub-item">Paiement d'adhésion</li>
+                            </ul>
+                        </li>
+                        <li class="project-item">
+                            <span class="project-item-title">Gestion des agendas</span>
+                            <ul class="sub-list">
+                                <li class="sub-item">Système d'inscription</li>
+                                <li class="sub-item">Système de modération</li>
+                                <li class="sub-item">Export de l'agenda au format ICS</li>
+
+                            </ul>
+                        </li>
+                    </ul>
+                    <div class="project-slider">
+                        <div class="slick-slider">
+                            <img class="slider-image" onclick="openModal(this)" src="assets/images/cticm-img1.png"
+                                alt="Screenshot 1" class="slider-image">
+                            <img class="slider-image" onclick="openModal(this)" src="assets/images/cticm-img2.png"
+                                alt="Screenshot 2" class="slider-image">
+                            <img class="slider-image" onclick="openModal(this)" src="assets/images/cticm-img3.png"
+                                alt="Screenshot 3" class="slider-image">
+                        </div>
+                    </div>
+                </div>
+                <a href="https://www.cticm.com/" target="_blank" class="project-link">Voir le site</a>
+            </article>
+            <article class="project">
+                <h3>RGPD et consentement</h3>
+                <ul class="project-list">
+                    <li class="project-item">
+                        <span class="project-item-title">Paramétrage d'AXEPTIO</span>
+                    </li>
+                    <li class="project-item">
+                        <span class="project-item-title">Développement d'un plugin de consentement:</span>
+                        <ul class="sub-list">
+                            <li class="sub-item">
+                                <span class="sub-item-title">Sur un thème ELEMENTOR</span>
+                            </li>
+                            <li class="sub-item">
+                                <span class="sub-item-title">Sur un thème à base de templating TWIG</span>
+                            </li>
+                            <li class="sub-item">
+                                <span class="sub-item-title">Mise en place sur Google reCAPTCHA V2, V3 avec des
+                                    formulaires
+                                    GRAVITY,
+                                    CONTACTFORM9, ACF</span>
+                            </li>
+                            <li class="sub-item">
+                                <span class="sub-item-title">Mise en place sur divers vidéos embarqués : Dailymotion,
+                                    Vimeo,
+                                    YouTube</span>
+                            </li>
+                            <li class="sub-item">
+                                <span class="sub-item-title">Google analytique</span>
+                            </li>
+                            <li class="sub-item">
+                                <span class="sub-item-title">Google consent V2</span>
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+            </article>
+            <article class="project">
+                <h3>Peche expert</h3>
+                <div class="project-content">
+                    <ul class="project-list">
+                        <li class="project-item">
+                            <span class="project-item-title">Mise en place de la liaison entre le catalogue et commande
+                                du
+                                site avec un outil externe MENLOG.</span>
+                            <ul class="sub-list">
+                                <li class="sub-item">Synchronisation des stocks</li>
+                                <li class="sub-item">Synchronisation des prix</li>
+                                <li class="sub-item">Synchronisation des commandes</li>
+                            </ul>
+                        </li>
+                    </ul>
+
+                </div>
+                <a href="https://www.peche-expert.com/" target="_blank" class="project-link">Voir le site</a>
+            </article>
+        </div>
     </section>
 
-    <!-- Section Contact -->
-    <section id="contact">
+    <section id="skills" class="animated-section">
+        <h2>Compétences</h2>
+        <ul class="skills-list">
+            <li><i class="fab fa-php"></i> PHP</li>
+            <li><i class="fab fa-wordpress"></i> WordPress</li>
+            <li><i class="fab fa-woocommerce"></i> WooCommerce</li>
+            <li><i class="fab fa-js"></i> JavaScript</li>
+            <li><i class="fab fa-html5"></i> HTML</li>
+            <li><i class="fab fa-css3-alt"></i> CSS</li>
+            <li><i class="fas fa-plug"></i> API REST</li>
+            <li><i class="fab fa-git"></i> Git & GitHub</li>
+        </ul>
+
+    </section>
+
+    <section id="contact" class="animated-section">
         <h2>Contact</h2>
         <p>N’hésitez pas à me contacter pour discuter de projets ou de collaborations.</p>
-        <ul>
-            <li>Email : <a href="mailto:tonemail@example.com">tonemail@example.com</a></li>
-            <li>LinkedIn : <a href="https://linkedin.com/in/tonprofil" target="_blank">Profil LinkedIn</a></li>
-            <li>GitHub : <a href="https://github.com/tonprofil" target="_blank">Profil GitHub</a></li>
-        </ul>
+        <div class="contact-info">
+            <a href="mailto:razanavahy@gmail.com" target="_blank">
+                <i class="fas fa-envelope"></i>Email : razanavahy@gmail.com
+            </a>
+            <a href="https://www.linkedin.com/in/robson-razanavahy" target="_blank">
+                <i class="fab fa-linkedin"></i>LinkedIn : Robson RAZANAVAHY
+            </a>
+            <a href="https://github.com/robsonrazanavahy" target="_blank">
+                <i class="fab fa-github"></i>GitHub : robsonrazanavahy
+            </a>
+        </div>
     </section>
+    <!-- Modale pour zoom -->
+    <div id="imgModal" class="modal" onclick="closeModal()">
+        <span class="close">&times;</span>
+        <img class="modal-content" id="modalImg">
+    </div>
+    <div id="loader">
+        <div class="loader-text">
+            <span id="loader-prenom">
+                <i class="fa fa-code"></i> Robson
+            </span>
+        </div>
+    </div>
 
-    <!-- Pied de page -->
     <footer>
-        <p>&copy; 2024 [Ton Nom]. Tous droits réservés.</p>
+        <p>&copy; 2024 RAZANAVAHY. Tous droits réservés.</p>
     </footer>
+
+    <script src="assets/scripts/custom.js"></script>
 </body>
 
 </html>

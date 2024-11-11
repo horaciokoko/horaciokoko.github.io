@@ -1,0 +1,1117 @@
+/* Reset */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+/* Variables par défaut */
+:root {
+    --primary-color: #00ffff;
+    /* Aqua */
+    --secondary-color: #20b2aa;
+    /* Light Sea Green */
+    --accent-color: #008b8b;
+    /* Dark Cyan */
+    --background-color: #e0f7fa;
+    --text-color: #00796b;
+}
+
+body.default {
+    --primary-color: #55198b;
+    /* Violet profond */
+    --secondary-color: #6a3d91;
+    /* Violet moyen */
+    --accent-color: #9b59b6;
+    /* Lilas */
+    --background-color: #f5f5f5;
+    /* Fond léger */
+    --text-color: #333333;
+    /* Texte sombre */
+    --button-color: #55198b;
+    /* Couleur des boutons */
+    --button-hover-color: #6a3d91;
+    /* Hover sur les boutons */
+    --border-color: #e0e0e0;
+    /* Bordures claires */
+    --link-color: #55198b;
+    /* Liens en violet */
+    --link-hover-color: #6a3d91;
+    /* Hover sur les liens */
+    --button-text-color: #ffffff;
+}
+/* Thèmes */
+body.summer {
+    --primary-color: var(--accent-color);
+    /* Orange */
+    --secondary-color: #FFD700;
+    /* Golden Yellow */
+    --accent-color: #FFA500;
+    /* Orange */
+    --background-color: #fff5e1;
+    /* Fond crème */
+    --text-color: #333;
+    /* Texte sombre */
+
+    --button-color: var(--accent-color);
+    /* Orange */
+    --button-text-color: #ffffff;
+    /* Texte bouton en blanc */
+    --button-hover-color: #e68900;
+    /* Hover orange plus foncé */
+    --border-color: #e0e0e0;
+    /* Bordure claire */
+    --link-color: var(--accent-color);
+    /* Liens orange */
+    --link-hover-color: #e68900;
+    /* Hover liens en orange foncé */
+}
+
+body.memory {
+    --primary-color: #b08d57;
+    /* Bronze */
+    --secondary-color: #4f4f4f;
+    /* Dark Gray */
+    --accent-color: #f0e68c;
+    /* Khaki */
+    --background-color: #f5f5f5;
+    /* Fond clair */
+    --text-color: #1a1a1a;
+    /* Texte très sombre */
+
+    --button-color: #b08d57;
+    /* Bronze pour les boutons */
+    --button-text-color: #ffffff;
+    /* Texte bouton en blanc */
+    --button-hover-color: #a07c4e;
+    /* Hover plus foncé */
+    --border-color: #e0e0e0;
+    /* Bordure claire */
+    --link-color: #b08d57;
+    /* Liens bronze */
+    --link-hover-color: #a07c4e;
+    /* Hover liens en bronze foncé */
+}
+body.earth {
+    --primary-color: #6e4b3a;
+    /* Brown */
+    --secondary-color: #228b22;
+    /* Forest Green */
+    --accent-color: #d2691e;
+    /* Chocolate */
+    --background-color: #f0e4d7;
+    /* Fond beige */
+    --text-color: #3e2723;
+    /* Texte foncé */
+
+    --button-color: #6e4b3a;
+    /* Brown */
+    --button-text-color: #ffffff;
+    /* Texte bouton en blanc */
+    --button-hover-color: #5c3e2d;
+    /* Hover plus foncé */
+    --border-color: #e0e0e0;
+    /* Bordure claire */
+    --link-color: #6e4b3a;
+    /* Liens marron */
+    --link-hover-color: #5c3e2d;
+    /* Hover liens en marron foncé */
+}
+
+body.sea-wave {
+    --primary-color: #20b2aa;
+    /* Light Sea Green */
+    --secondary-color: #4682b4;
+    /* Steel Blue */
+    --accent-color: #00ced1;
+    /* Dark Turquoise */
+    --background-color: #f0f8ff;
+    /* Fond très clair */
+    --text-color: #2f4f4f;
+    /* Texte sombre */
+
+    --button-color: #20b2aa;
+    /* Light Sea Green */
+    --button-text-color: #ffffff;
+    /* Texte bouton en blanc */
+    --button-hover-color: #1c7c76;
+    /* Hover turquoise foncé */
+    --border-color: #e0e0e0;
+    /* Bordure claire */
+    --link-color: #20b2aa;
+    /* Liens turquoise */
+    --link-hover-color: #1c7c76;
+    /* Hover liens en turquoise foncé */
+}
+
+body.ice-cream {
+    --primary-color: #f8c8dc;
+    /* Soft Pink */
+    --secondary-color: #ffb6c1;
+    /* Light Pink */
+    --accent-color: #dcdcdc;
+    /* Gainsboro */
+    --background-color: #fff;
+    /* Fond blanc */
+    --text-color: #4b0082;
+    /* Texte violet */
+
+    --button-color: #f8c8dc;
+    /* Soft Pink */
+    --button-text-color: #ffffff;
+    /* Texte bouton en blanc */
+    --button-hover-color: #e6a7b0;
+    /* Hover rose plus foncé */
+    --border-color: #e0e0e0;
+    /* Bordure claire */
+    --link-color: #f8c8dc;
+    /* Liens rose clair */
+    --link-hover-color: #e6a7b0;
+    /* Hover liens en rose foncé */
+}
+
+body.beach {
+    --primary-color: #f0e68c;
+    /* Khaki */
+    --secondary-color: #fffacd;
+    /* Lemon Chiffon */
+    --accent-color: #ff1493;
+    /* Deep Pink */
+    --background-color: #fff9c4;
+    /* Fond jaune pâle */
+    --text-color: #424242;
+    /* Texte sombre */
+
+    --button-color: #f0e68c;
+    /* Khaki */
+    --button-text-color: #ffffff;
+    /* Texte bouton en blanc */
+    --button-hover-color: #e0d15c;
+    /* Hover khaki foncé */
+    --border-color: #e0e0e0;
+    /* Bordure claire */
+    --link-color: #f0e68c;
+    /* Liens khaki */
+    --link-hover-color: #e0d15c;
+    /* Hover liens en khaki foncé */
+}
+
+body.aqua {
+    --primary-color: #00ffff;
+    /* Aqua */
+    --secondary-color: #20b2aa;
+    /* Light Sea Green */
+    --accent-color: #008b8b;
+    /* Dark Cyan */
+    --background-color: #e0f7fa;
+    /* Fond bleu clair */
+    --text-color: #00796b;
+    /* Texte vert foncé */
+
+    --button-color: #00ffff;
+    /* Aqua */
+    --button-text-color: #ffffff;
+    /* Texte bouton en blanc */
+    --button-hover-color: #00b3b3;
+    /* Hover aqua foncé */
+    --border-color: #e0e0e0;
+    /* Bordure claire */
+    --link-color: #00ffff;
+    /* Liens aqua */
+    --link-hover-color: #00b3b3;
+    /* Hover liens en aqua foncé */
+}
+/* Liens spécifiques aux thèmes */
+body button , body ul.skills-list li{
+    background-color: var(--button-color);
+    color: var(--button-text-color );
+    border: 1px solid var(--border-color);
+    /* padding: 10px 20px; */
+    cursor: pointer;
+}
+
+body button:hover {
+    background-color: var(--button-hover-color);
+}
+.slick-next , .slick-prev {
+    height: 100%;
+}
+body a {
+    color: var(--link-color);
+    text-decoration: none;
+}
+
+body a:hover {
+    color: var(--link-hover-color);
+}
+
+/* Styles généraux */
+body {
+    background-color: var(--background-color);
+    color: var(--text-color);
+    font-family: Arial, sans-serif;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+/* Boutons et liens */
+a,
+button,
+.button {
+    transition: color 0.3s, background-color 0.3s;
+}
+
+a {
+    color: var(--primary-color);
+    text-decoration: none;
+}
+
+a:hover {
+    background-color: var(--primary-color);
+    color: var(--background-color);
+}
+
+/* Boutons */
+button,
+.button {
+    background-color: var(--primary-color);
+    color: var(--background-color);
+    border: 1px solid var(--primary-color);
+    padding: 10px 20px;
+    cursor: pointer;
+}
+
+button:hover,
+.button:hover {
+    background-color: var(--secondary-color);
+    color: var(--text-color);
+}
+
+/* Titres */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    color: var(--primary-color);
+    font-family: 'Roboto', sans-serif;
+}
+
+h1 {
+    font-size: 3rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    text-align: center;
+    position: relative;
+    display: inline-block;
+    padding: 0.5rem 1rem;
+    background: linear-gradient(45deg, #ff6a00, #ff1493);
+    -webkit-background-clip: text;
+    background-clip: text;
+    animation: shine 3s ease-in-out infinite;
+    transition: font-size 0.3s ease;
+}
+
+/* Animation de brillance */
+@keyframes shine {
+    0% {
+        text-shadow: 0 0 10px rgba(255, 255, 255, 0.8);
+    }
+
+    50% {
+        text-shadow: 0 0 20px rgba(255, 255, 255, 0.8);
+    }
+
+    100% {
+        text-shadow: 0 0 10px rgba(255, 255, 255, 0.8);
+    }
+}
+
+h1:hover {
+    color: #fff;
+    background: linear-gradient(45deg, var(--background-color), var(--secondary-color));
+    text-shadow: 0 0 20px rgba(255, 255, 255, 0.9);
+    transform: translateY(-5px);
+    transition: all 0.3s ease-in-out;
+}
+
+/* Header, footer et sections */
+header,
+footer {
+    background-color: var(--background-color);
+}
+
+section,
+.content {
+    background-color: var(--background-color);
+    color: var(--text-color);
+}
+
+/* Header flexbox */
+header {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 20px;
+    align-items: center;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+/* Sélecteur de thème */
+.theme-selector-container {
+    display: flex;
+    align-items: center;
+}
+
+#theme-selector {
+    appearance: none;
+    background-color: #f4f4f4;
+    color: #333;
+    padding: 10px 20px;
+    border-radius: 30px;
+    border: 1px solid #ccc;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+#theme-selector:hover {
+    background-color: #e0e0e0;
+}
+.project-slider {
+    margin-right: 12px;
+}
+/* Menu */
+.menu-toggle {
+    display: none;
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 10px;
+    position: relative;
+    z-index: 200;
+}
+
+.hamburger {
+    width: 25px;
+    height: 3px;
+    position: relative;
+    transition: transform 0.3s ease-in-out;
+}
+
+.hamburger::before,
+.hamburger::after {
+    content: "";
+    width: 25px;
+    height: 3px;
+    position: absolute;
+    transition: transform 0.3s ease-in-out;
+    background-color: var(--text-color);
+}
+
+.hamburger::before {
+    top: -8px;
+}
+
+.hamburger::after {
+    bottom: -8px;
+}
+
+/* Menu principal */
+nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    padding-top: 10px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    font-size: 1em;
+    padding: 0.5em 1em;
+    transition: background 0.3s, transform 0.2s;
+}
+
+nav ul li a:hover {
+    border-radius: 5px;
+    transform: translateY(-2px);
+}
+/* Menu mobile */
+@media (max-width: 768px) {
+    .menu-toggle {
+        display: block;
+    }
+
+    nav ul {
+        display: flex;
+        flex-direction: column;
+        gap: 15px;
+        padding: 0;
+        margin: 0;
+        position: fixed;
+        top: 0;
+        left: 0;
+        background-color: var(--background-color);
+        /* Fond du menu mobile */
+        width: 100%;
+        height: 100%;
+        align-items: center;
+        justify-content: center;
+        transform: translateX(-100%);
+        transition: transform 0.3s ease-in-out;
+    }
+
+    nav ul.show-menu {
+        transform: translateX(0);
+    }
+
+    nav ul li a {
+        padding: 1em;
+        text-align: center;
+        font-size: 1.2em;
+        width: 100%;
+        /* color: var(--accent-color); */
+        position: relative;
+        display: flex;
+    }
+
+    /* Animation hamburger */
+    .menu-toggle.open .hamburger {
+        transform: rotate(45deg);
+    }
+
+    .menu-toggle.open .hamburger::before {
+        transform: rotate(90deg);
+        top: 0;
+    }
+
+    .menu-toggle.open .hamburger::after {
+        transform: rotate(90deg);
+        bottom: 0;
+    }
+
+    .slick-slider {
+        height: 200px !important;
+        width: 100% !important;
+        /* Réduit la hauteur sur les petits écrans */
+    }
+
+    .project-content {
+        display: inline !important;
+    }
+}
+
+/* Animations des sections */
+section {
+    padding: 4em 10%;
+    /* opacity: 0; */
+    transform: translateY(50px);
+    transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+
+section.in-view {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+section h2 {
+    color: var(--accent-color);
+    /* Couleur de titre en bleu profond */
+    font-size: 2em;
+    margin-bottom: 1em;
+    position: relative;
+    display: inline-block;
+    padding-bottom: 10px;
+}
+
+section h2::after {
+    content: '';
+    width: 60px;
+    height: 4px;
+    background: var(--primary-color);
+    /* Accent en bleu-vert */
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    border-radius: 2px;
+}
+
+/* Projects Styling */
+/* Style général du projet */
+.project-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 2%;
+}
+
+.project {
+    position: relative;
+    /* Permet de contrôler les positions des éléments internes */
+    padding-bottom: 20px;
+    /* Espacement sous l'article */
+}
+
+/* Styles pour le slider */
+.slick-slider {
+    width: 400px;
+    /* Largeur fixe du slider */
+    height: 100%;
+    /* Hauteur fixe du slider */
+    margin: 20px auto;
+    /* Centre le slider horizontalement */
+    position: relative;
+    border: 2px solid #ccc;
+    /* Ajoute une bordure autour du slider */
+    border-radius: 8px;
+    /* Arrondit les coins du slider */
+    /* overflow: hidden; */
+    /* Cache les débordements pour garder les images alignées */
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    /* Ombre légère pour effet moderne */
+}
+
+/* Styles pour chaque slide */
+.slick-slider .slick-slide {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+}
+
+/* Bordure autour des images individuelles */
+.slick-slider img {
+    width: 100%;
+    height: 100%;
+    border: 2px solid #ccc;
+    /* Bordure autour des images */
+    border-radius: 6px;
+    /* Bordure légèrement arrondie */
+    object-fit: cover;
+    /* Les images remplissent le slide sans distorsion */
+}
+
+
+
+
+/* Style du lien "Voir le site" */
+.project-link {
+    display: inline-block;
+    margin-top: 1em;
+    font-size: 1.1em;
+    color: var(--accent-color);
+    text-decoration: none;
+    font-weight: 600;
+    position: relative;
+    transition: color 0.3s ease;
+}
+
+.project-link::after {
+    content: ' →';
+    position: absolute;
+    right: -20px;
+    transition: transform 0.3s ease;
+}
+
+.project-link:hover::after {
+    transform: translateX(5px);
+}
+
+.project:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
+}
+
+.project h3 {
+    font-size: 1.8em;
+    font-weight: bold;
+    color: var(--accent-color);
+    margin-bottom: 1em;
+    position: relative;
+    padding-bottom: 10px;
+}
+
+.project h3::after {
+    content: '';
+    width: 60px;
+    height: 3px;
+    background: var(--primary-color);
+    position: absolute;
+    bottom: 0;
+    left: 0;
+}
+
+/* Style de la liste principale */
+.project-list {
+    list-style: none;
+    padding-left: 0;
+    padding-right: 2%;
+}
+
+.project-item {
+    padding: 0.8em 0;
+    border-left: 4px solid transparent;
+    margin-left: 20px;
+    position: relative;
+    transition: background 0.3s, transform 0.3s;
+}
+
+.project-item-title {
+    font-size: 1.1em;
+    color: #555;
+    font-weight: 600;
+    display: block;
+}
+
+.project-item:hover {
+    /* background-color: var(--secondary-color); */
+    border-left: 4px solid #ff6347;
+    transform: translateX(5px);
+}
+
+/* Liste secondaire (sous éléments) */
+.sub-list {
+    list-style: none;
+    padding-left: 20px;
+    margin-top: 0.5em;
+}
+
+.sub-item {
+    padding: 0.5em 0;
+    position: relative;
+    font-size: 1em;
+    color: #666;
+    transition: background 0.3s, transform 0.3s;
+}
+
+.sub-item-title {
+    display: inline-block;
+}
+
+.sub-item:hover {
+    /* background-color:var(--secondary-color); */
+    transform: translateX(5px);
+}
+
+.sub-item::before {
+    content: "✓";
+    font-size: 1.2em;
+    color: var(--accent-color);
+    position: absolute;
+    left: -20px;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+/* Animation de la liste */
+.project-list .project-item,
+.project-list .sub-item {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.6s ease, transform 0.6s ease;
+}
+
+.project-list .project-item.show,
+.project-list .sub-item.show {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Styles pour les médias et vidéos (optionnel si nécessaire) */
+.project-item .sub-item-title {
+    word-wrap: break-word;
+    font-size: 1em;
+    color: #555;
+}
+
+/* Skills List */
+ul.skills-list {
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+    margin-top: 1em;
+}
+
+ul.skills-list li {
+    background: var(--primary-color);
+    color: var(--text-color);
+    padding: 0.5em 1em;
+    border-radius: 20px;
+    transition: background 0.3s, transform 0.2s ease;
+}
+
+ul.skills-list li:hover {
+    /* background: #333; */
+    transform: scale(1.05);
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    padding: 1.5em;
+    /* background: var(--primary-color); */
+    /* color: var(--text-color) */
+    margin-top: 2em;
+    transition: background-color 0.3s;
+}
+
+footer:hover {
+    /* background:var(--secondary-color) */
+}
+
+/* Contact Icons and Buttons */
+.contact-info {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    margin-top: 1em;
+}
+
+.contact-info a {
+    display: inline-flex;
+    align-items: center;
+    padding: 0.7em 1.5em;
+    /* background-color: var(--background-color); */
+    /* color: var(--accent-color); */
+    border-radius: 25px;
+    text-decoration: none;
+    font-size: 1em;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.15);
+    transition: background 0.3s ease, box-shadow 0.3s ease, transform 0.2s ease;
+}
+
+.contact-info a i {
+    margin-right: 8px;
+    font-size: 1.2em;
+}
+
+.contact-info a:hover {
+    background-color: var(--secondary-color);
+    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.2);
+    transform: translateY(-2px);
+}
+
+/* Project Links as Buttons */
+.project-link {
+    display: inline-flex;
+    align-items: center;
+    padding: 0.7em 1.5em;
+    /* background-color: var(--primary-color); */
+    /* color: var(--accent-color); */
+    border-radius: 25px;
+    text-decoration: none;
+    font-size: 1em;
+    margin-top: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.15);
+    transition: background 0.3s ease, box-shadow 0.3s ease, transform 0.2s ease;
+}
+
+.project-link i {
+    margin-right: 8px;
+    font-size: 1.2em;
+}
+
+.project-link:hover {
+    /* background-color: var(--secondary-color); */
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+    transform: translateY(-2px);
+}
+
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    padding-top: 60px;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.9);
+}
+
+.modal-content {
+    margin: auto;
+    display: block;
+    width: 80%;
+    max-width: 700px;
+}
+
+.close {
+    position: absolute;
+    top: 15px;
+    right: 35px;
+    color: white;
+    font-size: 40px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    padding-top: 60px;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.9);
+}
+
+.modal-content {
+    margin: auto;
+    display: block;
+    width: 80%;
+    max-width: 700px;
+}
+
+.close {
+    position: absolute;
+    top: 15px;
+    right: 35px;
+    color: white;
+    font-size: 40px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+a.active {
+    color: var(--secondary-color);
+    /* Couleur pour indiquer l'élément actif */
+    transition: color 0.3s ease;
+}
+
+.menu a.active::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 3px;
+    background-color: var(--text-color);
+    transition: width 0.3s ease;
+}
+
+/* Section About */
+.about-section {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 60px auto;
+    max-width: 1200px;
+    padding: 40px;
+    /* background-color: #f8f8f8; */
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+}
+
+.about-section:hover {
+    transform: translateY(-10px);
+    /* Léger effet de survol */
+}
+
+/* Contenu textuel */
+.about-content {
+    flex: 1;
+    max-width: 600px;
+    padding-right: 40px;
+}
+
+.about-content h2 {
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+.about-content p {
+    font-size: 1.1rem;
+    line-height: 1.6;
+    color: #555;
+    margin-bottom: 30px;
+}
+
+.about-content h3 {
+    font-size: 1.8rem;
+    margin-bottom: 10px;
+    color: #444;
+}
+
+/* Liste des tâches */
+.about-tasks {
+    list-style: none;
+    padding: 0;
+    margin-top: 20px;
+}
+
+.about-tasks li {
+    font-size: 1.1rem;
+    /* color: var(--text-color); */
+    padding-left: 20px;
+    position: relative;
+    margin-bottom: 12px;
+}
+
+.about-tasks li::before {
+    content: "✔";
+    position: absolute;
+    left: 0;
+    color: var(--accent-color)
+    /* Vert pour la coche */
+}
+
+/* Image à droite */
+.about-image {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.about-image img {
+    width: 300px;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+.about-image img:hover {
+    transform: scale(1.1);
+    /* Zoom sur l'image lors du survol */
+}
+
+/* Animation au chargement */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.about-section {
+    animation: fadeInUp 2s;
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Pour les petits écrans (tablette et mobile) */
+@media (max-width: 768px) {
+    .about-section {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .about-content {
+        padding-right: 0;
+        margin-bottom: 30px;
+    }
+
+    .about-image img {
+        width: 250px;
+        margin-top: 20px;
+    }
+    .project-link {
+        margin-top: 10%;
+    }
+}
+
+.skills-list {
+    list-style-type: none;
+    padding: 0;
+}
+
+.skills-list li {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.skills-list i,
+.skills-list svg {
+    margin-right: 10px;
+    width: 20px;
+    height: 20px;
+}
+
+.about-image img {
+    transition: box-shadow 0.3s ease;
+}
+
+.about-image img:hover {
+    box-shadow: 0 0 20px 2px rgba(255, 255, 255, 0.8);
+}
+
+/* Loader container */
+#loader {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 9999;
+}
+
+/* Texte du loader */
+.loader-text {
+    font-family: 'Roboto', sans-serif;
+    font-size: 2rem;
+    font-weight: bold;
+    color: #4e4e4e;
+    text-align: center;
+    position: relative;
+}
+
+/* Animation de la saisie du texte */
+#loader-prenom {
+    display: inline-block;
+    overflow: hidden;
+    white-space: nowrap;
+    width: 0;
+    border-right: 3px solid #4e4e4e;
+    animation: typing 2.5s steps(12) 1s forwards, blink 0.75s step-end infinite;
+}
+
+/* Animation de la saisie */
+@keyframes typing {
+    from {
+        width: 0;
+    }
+
+    to {
+        width: 100%;
+    }
+}
+
+/* Clignotement du curseur */
+@keyframes blink {
+    50% {
+        border-color: transparent;
+    }
+}
