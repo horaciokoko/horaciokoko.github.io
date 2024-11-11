@@ -7,14 +7,27 @@
 
 /* Variables par défaut */
 :root {
-    --primary-color: #00ffff;
-    /* Aqua */
-    --secondary-color: #20b2aa;
-    /* Light Sea Green */
-    --accent-color: #008b8b;
-    /* Dark Cyan */
-    --background-color: #e0f7fa;
-    --text-color: #00796b;
+    --primary-color: #55198b;
+        /* Violet profond */
+        --secondary-color: #6a3d91;
+        /* Violet moyen */
+        --accent-color: #9b59b6;
+        /* Lilas */
+        --background-color: #f5f5f5;
+        /* Fond léger */
+        --text-color: #333333;
+        /* Texte sombre */
+        --button-color: #55198b;
+        /* Couleur des boutons */
+        --button-hover-color: #6a3d91;
+        /* Hover sur les boutons */
+        --border-color: #e0e0e0;
+        /* Bordures claires */
+        --link-color: #55198b;
+        /* Liens en violet */
+        --link-hover-color: #6a3d91;
+        /* Hover sur les liens */
+        --button-text-color: #ffffff;
 }
 
 body.default {
@@ -904,14 +917,16 @@ a.active {
     justify-content: space-between;
     align-items: center;
     margin: 60px auto;
-    max-width: 1200px;
+    /* max-width: 1200px; */
     padding: 40px;
     /* background-color: #f8f8f8; */
-    border-radius: 10px;
+    /* border-radius: 10px; */
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
     transition: all 0.3s ease;
 }
-
+section#projects {
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
 .about-section:hover {
     transform: translateY(-10px);
     /* Léger effet de survol */
@@ -1095,7 +1110,7 @@ a.active {
     white-space: nowrap;
     width: 0;
     border-right: 3px solid #4e4e4e;
-    animation: typing 2.5s steps(12) 1s forwards, blink 0.75s step-end infinite;
+    animation: typing 2s steps(12) 1s forwards, blink 0.75s step-end infinite;
 }
 
 /* Animation de la saisie */
